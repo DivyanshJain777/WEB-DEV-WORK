@@ -1,0 +1,39 @@
+#navbar{
+    flex-direction: column;
+}
+
+/* home section */
+#Home{
+    height: 322px;
+    padding: 23px 34px;
+}
+
+#include <bits/stdc++.h>
+
+using namespace std;
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+		int i,p,r=0;
+		string s;
+		cin>>s;
+		int a[28];
+		for(i=0;i<s.size();i++)
+		{
+			p = (int)s[i];
+			a[p-97] +=1;
+		}
+		for(i=0;i<26;i++)
+		{
+			if(a[i]>=2)
+			{
+				r=1;
+				break;
+			}
+		}
+		if(r==1) cout<<"Yes"<<endl;
+		else cout<<"No"<<endl;
+	}
+}
